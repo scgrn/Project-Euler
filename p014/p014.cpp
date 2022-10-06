@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) {
 			longestStartingNumber = i;
 		}
 	}
-	std::cout << "Longest change: " << longestChain << std::endl;
+	std::cout << "Longest chain: " << longestChain << std::endl;
 	std::cout << longestStartingNumber << std::endl;
 	
 	return 0;
