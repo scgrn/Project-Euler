@@ -9,7 +9,43 @@ What is the total of all the name scores in the file?
 */
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <algorithm>
 
 int main(int argc, char* argv[]) {
+	std::fstream input;
+	input.open("p022/p022_names.txt");
+	
+	std::string line;
+	getline(input, line);
+	input.close();
+	std::stringstream ss(line);
+	
+	std::string name;
+	std::vector<std::string> names;
+	while (getline(ss, name, ',')) {
+		name = name.substr(1, name.size() - 2);
+		names.push_back(name);
+	}
+	
+	std::sort(names.begin(), names.end());
+	
+	unsigned long total = 0;
+	int index = 1;
+	for (std::string name : names) {
+		int score = 0;
+		for (int i = 0; i < name.size(); i++) {
+			score += (int)name[i] - 64;
+		}
+		score *= index;
+		total += score;
+		
+		index++;
+	}
+	
+	std::cout << total << std::endl;
+	
 	return 0;
 }
