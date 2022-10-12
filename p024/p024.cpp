@@ -16,16 +16,10 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 
 int main(int argc, char* argv[]) {
 	std::string s = "0123456789";
 	
-	int index = 0;
-	do {
-		unsigned long value{ std::stoul(s) };
-
-		index++;
-		if (index == 1000000) {
-			std::cout << value << "\n";
-			break;
-		}
-	} while (std::next_permutation(s.begin(), s.end()));
+	for (int i = 1; i < 1000000; i++ ) {
+                std::next_permutation(s.begin(), s.end());
+        }
+        std::cout << std::stoul(s) << std::endl;
 
 	return 0;
 }
