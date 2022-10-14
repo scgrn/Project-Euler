@@ -6,4 +6,4 @@ Here are my solutions to the first 100 [Project Euler](https://projecteuler.net/
 
 If you copy these solutions without solving the problems yourself, you're just robbing yourself of knowledge, so the joke is on you.
 
-Feel free to come up with your own interpretive dance to each solution.
+Enjoy your stay!
