@@ -22,7 +22,7 @@ Find the value of d < 1000 for which 1/d contains the longest recurring cycle in
 
 int fractionalCycleLength(int dividend, int divisor) {
     std::string result;
-    std::map<int, int> remainderMap;
+    std::map<int, bool> remainderMap;
 
     int remainder = dividend % divisor;
 

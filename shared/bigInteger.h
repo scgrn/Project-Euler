@@ -467,10 +467,10 @@ std::istream &operator >> (std::istream &in, BigInteger &a) {
  
 std::ostream &operator << (std::ostream &out, const BigInteger &a) {
 	for (int i = a.digits.size() - 1; i >= 0; i--) {
-		std::cout << (short)a.digits[i];
+		out << (short)a.digits[i];
 	}
 	
-	return std::cout;
+	return out;
 }
 
 #endif
