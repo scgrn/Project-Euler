@@ -45,7 +45,7 @@ bool isTriangleWord(std::string word) {
 
 int main(int argc, char* argv[]) {
     std::string line;
-    std::ifstream file("0042_words.txt");
+    std::ifstream file("p042/0042_words.txt");
 
     if (file.is_open()) {
         int total = 0;
